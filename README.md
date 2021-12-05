@@ -5,7 +5,7 @@
 * Build or download builded libgeokar2006HNM_Unlocker.so
 * Decompile HNM
 * Copy libgeokar2006HNM_Unlocker.so into decompiled lib folder apk
-* Put this smali code to onCreate function in "com/epicgames/ue4/SplashActivity" after `.end annotation"` line or if no `.end annotation` line after `.register` line
+* Put this smali code to onCreate function in "com/epicgames/ue4/SplashActivity" after `.end annotation` line or if no `.end annotation` line after `.register` line
 ```smali
 const-string v0, "geokar2006HNM_Unlocker"
 
