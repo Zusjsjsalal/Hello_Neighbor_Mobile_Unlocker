@@ -8,16 +8,14 @@ LOCAL_CPPFLAGS := -Wno-error=format-security -fvisibility=hidden -ffunction-sect
 LOCAL_CPPFLAGS += -Wno-error=c++11-narrowing -fms-extensions -fno-rtti -fno-exceptions -fpermissive
 LOCAL_LDFLAGS += -Wl,--gc-sections,--strip-all, -llog
 
-ifeq ($(TARGET_ARCH_ABI), arm64-v8a)
-    LOCAL_MODULE := geokar2006HNM_Unlocker
+LOCAL_MODULE := geokar2006HNM_Unlocker
+LOCAL_MODULE_FILENAME := libgeokar2006HNM_Unlocker
 
-	LOCAL_SRC_FILES := main.cpp \
-	And64InlineHook/And64InlineHook.cpp \
+LOCAL_SRC_FILES := main.cpp \
+And64InlineHook/And64InlineHook.cpp \
 
-    LOCAL_CPP_INCLUDES += $(LOCAL_PATH)
-    
-endif
-
+LOCAL_CPP_INCLUDES += $(LOCAL_PATH)
+ 
 LOCAL_LDLIBS += -L$(SYSROOT)/usr/lib -lz -llog
 
 include $(BUILD_EXECUTABLE)
